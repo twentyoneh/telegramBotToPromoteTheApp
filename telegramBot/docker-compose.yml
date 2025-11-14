@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  telegram-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: twentyoneh/telegram-bot:1.0
+    container_name: telegram-bot-app-helper
+    environment:
+      - JAVA_OPTS=
+    restart: unless-stopped
